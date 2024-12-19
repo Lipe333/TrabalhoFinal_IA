@@ -79,7 +79,7 @@ Cluster 1 - Quantidade de trens para EAST: 30, e para WEST: 32
 
 Com a aplicação do algoritmo de clustering, foi possível conferir nitidamente a formação de um agrupamento (Cluster 0) contendo apenas os trens com 5 carros (1 locomotiva e 4 vagões) e um outro agrupamento (Cluster 1) contendo os demais exemplos de trens com menos de 5 carros.
 
-Ocorre que essa divisão ainda mantém muita aproximada de 50% a proporção de trens que se destinam a cada lado (EAST e WEST) em ambos os clusters, de modo que exige a adoção de outros critérios para análise e identificação de potenciais regras de determinação do direicionamento aplicáveis a essa instância de Michalsky.
+Ocorre que essa divisão ainda mantém muita aproximada de 50% a proporção de trens que se destinam a cada lado (EAST e WEST) em ambos os clusters, de modo que exige a adoção de outros critérios para análise e identificação de potenciais regras de determinação do direcionamento aplicáveis a essa instância de Michalsky.
 
 Para essa tarefa complementar, definimos abaixo então a função split_dataset, a partir do código em python fornecido na especificação do trabalho, com algumas adaptações para extrair dados relevantes para a síntese dos axiomas com base na análise de padrões dos clusters, assim como da totalidade da amostra.
 
