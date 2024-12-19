@@ -28,7 +28,7 @@ A ideia do estudo seria, primeiro, identificar, por análise, as característica
 ## Questão 1 - `clustering_trabfinal.ipynb`:
 ### A)  
 
-### Agrupar trens por similaridade usando algoritmo de clustering:  
+### Estrutura do dataset pré processado par aplicar o clustering (K-Means):  
 
 Data columns (total 33 columns):  
 |    | Column                        | Non-Null Count | Dtype |      
