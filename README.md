@@ -111,6 +111,7 @@ Predicados dados:
  - next_hex(t, c, x) em que t ∊ [1..100] e c ∊ [1..4] e x ∊ [0..1], em que o vagão c do trem t tem um vagão adjacente com cargas em hexágono.  
  - next_rec(t, c, x) em que t ∊ [1..100] e c ∊ [1..4] e x ∊ [0..1], em que o vagão c do trem t tem um vagão adjacente com cargas em retângulo.  
  - next_tri(t, c, x) em que t ∊ [1..100] e c ∊ [1..4] e x ∊ [0..1], em que o vagão c do trem t tem um vagão adjacente com cargas em triângulo.  
+
 Predicados novos identificados:  
 
  - num_cars_long(t, nclg), em que t ∊ [1..100] e nclg ∊ [0..4], indicando a quantidade de vagões de comprimento longo.  
