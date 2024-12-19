@@ -88,7 +88,6 @@ Após a inclusão dessas novas colunas, aplicamos novamente a função split_dat
 a coluna 'Number_of_cars' percebida com aplicação do algoritmo de clustering;
 e as três novas colunas criadas: 'quant_car_long'; 'has_load_hexagon_shape'; 'has_num_loads_car_above1'.
 
-# tabela
 
 Dessa forma, restaram mais evidentes os pontos de similaridades investigados, tornando possível apresentar supostos axiomas para determinar a orientação dos trens com maior potencial de precisão.
 
