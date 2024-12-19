@@ -31,41 +31,41 @@ A ideia do estudo seria, primeiro, identificar, por análise, as característica
 ### Agrupar trens por similaridade usando algoritmo de clustering:  
 
 Data columns (total 33 columns):  
-    Column                       Non-Null Count  Dtype    
-  
- 0   Number_of_cars               100 non-null    float64  
- 1   Number_of_different_loads    100 non-null    float64  
- 2   num_wheels1                  100 non-null    float64  
- 3   length1                      100 non-null    float64  
- 4   shape1                       100 non-null    float64  
- 5   num_loads1                   100 non-null    float64  
- 6   load_shape1                  100 non-null    float64  
- 7   num_wheels2                  100 non-null    float64  
- 8   length2                      100 non-null    float64  
- 9   shape2                       100 non-null    float64  
- 10  num_loads2                   100 non-null    float64  
- 11  load_shape2                  100 non-null    float64  
- 12  num_wheels3                  100 non-null    float64  
- 13  length3                      100 non-null    float64  
- 14  shape3                       100 non-null    float64  
- 15  num_loads3                   100 non-null    float64  
- 16  load_shape3                  100 non-null    float64  
- 17  num_wheels4                  100 non-null    float64  
- 18  length4                      100 non-null    float64  
- 19  shape4                       100 non-null    float64  
- 20  num_loads4                   100 non-null    float64  
- 21  load_shape4                  100 non-null    float64  
- 22  Rectangle_next_to_rectangle  100 non-null    float64  
- 23  Rectangle_next_to_triangle   100 non-null    float64  
- 24  Rectangle_next_to_hexagon    100 non-null    float64  
- 25  Rectangle_next_to_circle     100 non-null    float64  
- 26  Triangle_next_to_triangle    100 non-null    float64  
- 27  Triangle_next_to_hexagon     100 non-null    float64  
- 28  Triangle_next_to_circle      100 non-null    float64  
- 29  Hexagon_next_to_hexagon      100 non-null    float64  
- 30  Hexagon_next_to_circle       100 non-null    float64  
- 31  Circle_next_to_circle        100 non-null    float64  
- 32  Class_attribute              100 non-null    float64  
+|    | Column                        | Non-Null Count | Dtype |      
+|----|-------------------------------|----------------|--------|
+| 0  |  Number_of_cars               | 100 non-null  |  float64 | 
+| 1  |  Number_of_different_loads    | 100 non-null  |  float64 | 
+| 2  |  num_wheels1                  | 100 non-null  |  float64 | 
+| 3  |  length1                      | 100 non-null  |  float64 | 
+| 4  |  shape1                       | 100 non-null  |  float64 |
+| 5  |  num_loads1                   | 100 non-null  |  float64 | 
+| 6  |  load_shape1                  | 100 non-null  |  float64 | 
+| 7  |  num_wheels2                  | 100 non-null  |  float64 | 
+| 8  |  length2                      | 100 non-null  |  float64 | 
+| 9  |  shape2                       | 100 non-null  |  float64 | 
+| 10 | num_loads2                    | 100 non-null  |  float64 | 
+| 11 | load_shape2                   | 100 non-null  |  float64 | 
+| 12 | num_wheels3                   | 100 non-null  |  float64 | 
+| 13 | length3                       | 100 non-null  |  float64 | 
+| 14 | shape3                        | 100 non-null  |  float64 | 
+| 15 | num_loads3                    | 100 non-null  |  float64 | 
+| 16 | load_shape3                   | 100 non-null  |  float64 | 
+| 17 | num_wheels4                   | 100 non-null  |  float64 | 
+| 18 | length4                       | 100 non-null  |  float64 | 
+| 19 | shape4                        | 100 non-null  |  float64 | 
+| 20 | num_loads4                    | 100 non-null  |  float64 | 
+| 21 | load_shape4                   | 100 non-null  |  float64 | 
+| 22 | Rectangle_next_to_rectangle   | 100 non-null  |  float64 | 
+| 23 | Rectangle_next_to_triangle    | 100 non-null  |  float64 | 
+| 24 | Rectangle_next_to_hexagon     | 100 non-null  |  float64 | 
+| 25 | Rectangle_next_to_circle      | 100 non-null  |  float64 | 
+| 26 | Triangle_next_to_triangle     | 100 non-null  |  float64 | 
+| 27 | Triangle_next_to_hexagon      | 100 non-null  |  float64 | 
+| 28 | Triangle_next_to_circle       | 100 non-null  |  float64 | 
+| 29 | Hexagon_next_to_hexagon       | 100 non-null  |  float64 | 
+| 30 | Hexagon_next_to_circle        | 100 non-null  |  float64 | 
+| 31 | Circle_next_to_circle         | 100 non-null  |  float64 | 
+| 32 | Class_attribute               | 100 non-null  |  float64 | 
 
 ### Os Trens são visualizados de forma interativa no espaço 2D usando Plotly, cada ponto representa um trem.
 
