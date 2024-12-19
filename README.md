@@ -125,9 +125,9 @@ O modelo criado é uma rede neural simples, composta por uma camada oculta de 16
 Após o treinamento, o modelo é avaliado no conjunto de teste. Os resultados incluem a acurácia final, a perda, e a geração de previsões que são comparadas aos rótulos verdadeiros. Essas previsões são exportadas para um arquivo CSV, detalhando as saídas da rede, os rótulos esperados e a classe correspondente. 
 
 #### Definindo modelo - o modelo será uma rede neural para prever a classe do trem (leste ou oeste):
-### Gráfico de Acurácia
-![Sem título](https://github.com/user-attachments/assets/09af2d48-5c32-4d77-84e2-1cfadc0a5454)
 ### Gráfico de Perda
+![Sem título](https://github.com/user-attachments/assets/09af2d48-5c32-4d77-84e2-1cfadc0a5454)
+### Gráfico de Acurácia
 ![Sem título](https://github.com/user-attachments/assets/9f695ede-a7f2-4d21-80b1-76630b338d72)
 
 ### Resultados:
