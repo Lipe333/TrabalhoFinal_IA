@@ -11,6 +11,10 @@ Felipe Spitale (felipe.spitale@icomp.ufam.edu.br)
 Marcello Cipriano (marcello.cipriano@icomp.ufam.edu.br)   
 Pedro Henrique (pedro.santos@icomp.ufam.edu.br)   
 
+### Observação:
+
+O data set usado foi o arquivo `trains-uptated.csv`, mas ele foi processado para poder ser usado no treinamento.
+O resultado do data set processado é o arquivo `processedDataset.csv`
 
 ### Escopo:
 
