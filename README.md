@@ -26,7 +26,7 @@ A ideia do estudo seria, primeiro, identificar, por análise, as característica
 Agrupar trens por similaridade usando algoritmo de clustering:  
 
 Data columns (total 33 columns):  
- #   Column                       Non-Null Count  Dtype    
+    Column                       Non-Null Count  Dtype    
 ---  ------                       --------------  -----    
  0   Number_of_cars               100 non-null    float64  
  1   Number_of_different_loads    100 non-null    float64  
