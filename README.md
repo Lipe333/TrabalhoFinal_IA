@@ -119,9 +119,57 @@ Predicados novos identificados:
 Obs.: Como predicado relativo à nova coluna 'has_load_hexagon_shape' é possível utilizar o expresso no número 7 acima.  
 
 ## Questão 2:
+
+O modelo criado é uma rede neural simples, composta por uma camada oculta de 16 neurônios e uma saída com ativação Sigmoid, adequada para problemas de classificação binária. A lógica fuzzy é incorporada ao treinamento por meio de uma função de perda personalizada, capaz de lidar com incertezas nos dados. O treinamento é realizado ao longo de 10 épocas, utilizando o otimizador Adam, com registro das métricas de perda e acurácia.
+
+Após o treinamento, o modelo é avaliado no conjunto de teste. Os resultados incluem a acurácia final, a perda, e a geração de previsões que são comparadas aos rótulos verdadeiros. Essas previsões são exportadas para um arquivo CSV, detalhando as saídas da rede, os rótulos esperados e a classe correspondente. 
+
 #### Definindo modelo - o modelo será uma rede neural para prever a classe do trem (leste ou oeste):
 ### Gráfico de Acurácia
 ![Sem título](https://github.com/user-attachments/assets/09af2d48-5c32-4d77-84e2-1cfadc0a5454)
 ### Gráfico de Perda
 ![Sem título](https://github.com/user-attachments/assets/9f695ede-a7f2-4d21-80b1-76630b338d72)
+
+### Resultados:
+| Train | Output of Flat Network | Desired Output | Class |
+|-------|-------------------------|----------------|-------|
+| 0     | 0.624739               | 0.0            | west  |
+| 1     | 0.587081               | 0.0            | west  |
+| 2     | 0.647352               | 0.0            | west  |
+| 3     | 0.740727               | 0.0            | west  |
+| 4     | 0.521295               | 0.0            | west  |
+| 5     | 0.466937               | 0.0            | west  |
+| 6     | 0.424476               | 0.0            | west  |
+| 7     | 0.601653               | 0.0            | west  |
+| 8     | 0.605743               | 0.0            | west  |
+| 9     | 0.561406               | 0.0            | west  |
+| 10    | 0.304501               | 0.0            | west  |
+| 11    | 0.845259               | 0.0            | west  |
+| 12    | 0.511705               | 0.0            | west  |
+| 13    | 0.612903               | 0.0            | west  |
+| 14    | 0.565936               | 0.0            | west  |
+| 15    | 0.774926               | 1.0            | east  |
+| 16    | 0.449024               | 1.0            | east  |
+| 17    | 0.933857               | 1.0            | east  |
+| 18    | 0.668197               | 1.0            | east  |
+| 19    | 0.789437               | 1.0            | east  |
+| 20    | 0.671757               | 1.0            | east  |
+| 21    | 0.543771               | 1.0            | east  |
+| 22    | 0.186552               | 1.0            | east  |
+| 23    | 0.524389               | 1.0            | east  |
+| 24    | 0.477698               | 1.0            | east  |
+| 25    | 0.493128               | 1.0            | east  |
+| 26    | 0.734335               | 1.0            | east  |
+| 27    | 0.662050               | 1.0            | east  |
+| 28    | 0.843971               | 1.0            | east  |
+| 29    | 0.802363               | 1.0            | east  |
+
+
+### Comparação
+![image](https://github.com/user-attachments/assets/7ab90067-4139-42f2-873a-7a6bbef1c8ac)
+
+A comparação entre a saída da rede neural atual e o modelo do livro evidencia diferenças significativas no comportamento do modelo. Enquanto a tabela original utiliza valores de saída amplamente distribuídos, próximos de 1 para a classe "east" e -1 para a classe "west", a rede atual gera saídas restritas ao intervalo [0, 1], com muitos valores concentrados próximos de 0.5. Além disso, os rótulos utilizados na rede atual são 0 e 1, ao contrário da tabela original, que adota 1 e -1. Essa discrepância sugere que o modelo atual apresenta menor confiança nas predições, o que pode ser resultado da escolha da função de ativação sigmoide, que restringe as saídas ao intervalo positivo, bem como da simplicidade da arquitetura e de possíveis diferenças no pré-processamento dos dados.
+
+### Como seria possivel extrair do modelo a regra  car(T,C)∧short(C)∧closed_top(C) → east(T)?
+A extração da regra **`car(T, C) ∧ short(C) ∧ closed_top(C) → east(T)`** pode ser feita observando o comportamento do modelo treinado, analisando as entradas que levam à classificação "east(T)". As ativações das camadas intermediárias ou a correlação entre atributos relevantes (`short(C)` e `closed_top(C)`) e a saída "east" são rastreadas. Em seguida, técnicas como árvores de decisão ou métodos baseados em regras ajudam a formular e validar a regra, garantindo que ela seja consistente com os dados.
 
