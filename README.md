@@ -111,3 +111,11 @@ Predicados novos identificados:
 num_cars_long(t, nclg), em que t ∊ [1..100] e nclg ∊ [0..4], indicando a quantidade de vagões de comprimento longo.  
 has_num_loads_car_above1(t, nlab1), em que t ∊ [1..100] e nlab1 ∊ [0..1], indicando se o trem tem algum vagão com uma carga superior a uma unidade.  
 Obs.: Como predicado relativo à nova coluna 'has_load_hexagon_shape' é possível utilizar o expresso no número 7 acima.  
+
+## Questão 2:
+#### Definindo modelo - o modelo será uma rede neural para prever a classe do trem (leste ou oeste):
+### Grafico de Acuracia
+![Sem título](https://github.com/user-attachments/assets/09af2d48-5c32-4d77-84e2-1cfadc0a5454)
+### Grafico de Perda
+![Sem título](https://github.com/user-attachments/assets/9f695ede-a7f2-4d21-80b1-76630b338d72)
+
