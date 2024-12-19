@@ -100,21 +100,21 @@ Antes porém de expressar os identificados axiomas, deixemos clara a relação d
 
 Predicados dados:
 
-num_cars(t, nc), em que t ∊ [1..100] e nc ∊ [3..5] (nc denota o número de carros do trem incluindo a locomotiva).  
-num_loads(t, nl) em que t ∊ [1..100] e nl ∊ [1..4].  
-num_wheels(t, c, w) em que t ∊ [1..100] e c ∊ [1..4] e w ∊ [2..3].  
-length(t, c, l) em que t ∊ [1..100] e c ∊ [1..4] e l ∊ [1..2] (1 denota curto e 2 longo)  
-shape(t, c, s) em que t ∊ [1..100] e c ∊ [1..4] e s ∊ [1..15] (um número para cada forma).  
-num_cars_loads(t, c, ncl) em que t ∊ [1..100] e c ∊ [1..4] e ncl ∊ [0..3].  
-load_shape(t, c, ls) em que t ∊ [1..100] e c ∊ [1..4] e ls ∊ [1..4].   
-next_crc(t, c, x) em que t ∊ [1..100] e c ∊ [1..4] e x ∊ [0..1], em que o vagão c do trem t tem um vagão adjacente com cargas em círculo.  
-next_hex(t, c, x) em que t ∊ [1..100] e c ∊ [1..4] e x ∊ [0..1], em que o vagão c do trem t tem um vagão adjacente com cargas em hexágono.  
-next_rec(t, c, x) em que t ∊ [1..100] e c ∊ [1..4] e x ∊ [0..1], em que o vagão c do trem t tem um vagão adjacente com cargas em retângulo.  
-next_tri(t, c, x) em que t ∊ [1..100] e c ∊ [1..4] e x ∊ [0..1], em que o vagão c do trem t tem um vagão adjacente com cargas em triângulo.  
+ - num_cars(t, nc), em que t ∊ [1..100] e nc ∊ [3..5] (nc denota o número de carros do trem incluindo a locomotiva).  
+ - num_loads(t, nl) em que t ∊ [1..100] e nl ∊ [1..4].  
+ - num_wheels(t, c, w) em que t ∊ [1..100] e c ∊ [1..4] e w ∊ [2..3].  
+ - length(t, c, l) em que t ∊ [1..100] e c ∊ [1..4] e l ∊ [1..2] (1 denota curto e 2 longo)  
+ - shape(t, c, s) em que t ∊ [1..100] e c ∊ [1..4] e s ∊ [1..15] (um número para cada forma).  
+ - num_cars_loads(t, c, ncl) em que t ∊ [1..100] e c ∊ [1..4] e ncl ∊ [0..3].  
+ - load_shape(t, c, ls) em que t ∊ [1..100] e c ∊ [1..4] e ls ∊ [1..4].   
+ - next_crc(t, c, x) em que t ∊ [1..100] e c ∊ [1..4] e x ∊ [0..1], em que o vagão c do trem t tem um vagão adjacente com cargas em círculo.  
+ - next_hex(t, c, x) em que t ∊ [1..100] e c ∊ [1..4] e x ∊ [0..1], em que o vagão c do trem t tem um vagão adjacente com cargas em hexágono.  
+ - next_rec(t, c, x) em que t ∊ [1..100] e c ∊ [1..4] e x ∊ [0..1], em que o vagão c do trem t tem um vagão adjacente com cargas em retângulo.  
+ - next_tri(t, c, x) em que t ∊ [1..100] e c ∊ [1..4] e x ∊ [0..1], em que o vagão c do trem t tem um vagão adjacente com cargas em triângulo.  
 Predicados novos identificados:  
 
-num_cars_long(t, nclg), em que t ∊ [1..100] e nclg ∊ [0..4], indicando a quantidade de vagões de comprimento longo.  
-has_num_loads_car_above1(t, nlab1), em que t ∊ [1..100] e nlab1 ∊ [0..1], indicando se o trem tem algum vagão com uma carga superior a uma unidade.  
+ - num_cars_long(t, nclg), em que t ∊ [1..100] e nclg ∊ [0..4], indicando a quantidade de vagões de comprimento longo.  
+ - has_num_loads_car_above1(t, nlab1), em que t ∊ [1..100] e nlab1 ∊ [0..1], indicando se o trem tem algum vagão com uma carga superior a uma unidade.  
 Obs.: Como predicado relativo à nova coluna 'has_load_hexagon_shape' é possível utilizar o expresso no número 7 acima.  
 
 ## Questão 2:
