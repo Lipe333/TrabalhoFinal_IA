@@ -25,7 +25,7 @@ Propõe-se que os trens teriam seus destinos considerados para EAST ou WEST conf
 A ideia do estudo seria, primeiro, identificar, por análise, as características que poderiam evidenciar padrões de determinação da direção dos trens, usando para tanto algoritmos de clustering e um programa auxiliar fornecido capaz de apontar similaridades entre atributos, o split_dataset.py. Dessa análise, o objetivo era extrair ou gerar supostos axiomas que serviriam de base para a criação de um modelo LTN que possa testar as regras para classificação dos trens no dataset, com a implementação de uma solucão em LTNTorch.
 
 
-## Questão 1:
+## Questão 1 - `clustering_trabfinal.ipynb`:
 ### A)  
 
 ### Agrupar trens por similaridade usando algoritmo de clustering:  
@@ -118,7 +118,7 @@ Predicados novos identificados:
  - has_num_loads_car_above1(t, nlab1), em que t ∊ [1..100] e nlab1 ∊ [0..1], indicando se o trem tem algum vagão com uma carga superior a uma unidade.  
 Obs.: Como predicado relativo à nova coluna 'has_load_hexagon_shape' é possível utilizar o expresso no número 7 acima.  
 
-## Questão 2:
+## Questão 2 - `LtnTorchModel.ipynb`:
 
 O modelo criado é uma rede neural simples, composta por uma camada oculta de 16 neurônios e uma saída com ativação Sigmoid, adequada para problemas de classificação binária. A lógica fuzzy é incorporada ao treinamento por meio de uma função de perda personalizada, capaz de lidar com incertezas nos dados. O treinamento é realizado ao longo de 10 épocas, utilizando o otimizador Adam, com registro das métricas de perda e acurácia.
 
@@ -170,6 +170,10 @@ Após o treinamento, o modelo é avaliado no conjunto de teste. Os resultados in
 
 A comparação entre a saída da rede neural atual e o modelo do livro evidencia diferenças significativas no comportamento do modelo. Enquanto a tabela original utiliza valores de saída amplamente distribuídos, próximos de 1 para a classe "east" e -1 para a classe "west", a rede atual gera saídas restritas ao intervalo [0, 1], com muitos valores concentrados próximos de 0.5. Além disso, os rótulos utilizados na rede atual são 0 e 1, ao contrário da tabela original, que adota 1 e -1. Essa discrepância sugere que o modelo atual apresenta menor confiança nas predições, o que pode ser resultado da escolha da função de ativação sigmoide, que restringe as saídas ao intervalo positivo, bem como da simplicidade da arquitetura e de possíveis diferenças no pré-processamento dos dados.
 
-### Como seria possivel extrair do modelo a regra  car(T,C)∧short(C)∧closed_top(C) → east(T)?
+### Como seria possivel extrair do modelo a regra **`car(T, C) ∧ short(C) ∧ closed_top(C) → east(T)`**?
 A extração da regra **`car(T, C) ∧ short(C) ∧ closed_top(C) → east(T)`** pode ser feita observando o comportamento do modelo treinado, analisando as entradas que levam à classificação "east(T)". As ativações das camadas intermediárias ou a correlação entre atributos relevantes (`short(C)` e `closed_top(C)`) e a saída "east" são rastreadas. Em seguida, técnicas como árvores de decisão ou métodos baseados em regras ajudam a formular e validar a regra, garantindo que ela seja consistente com os dados.
+
+###  Existe alguma regra similar para os 100 trens? Se não, quantas possíveis deveria seu modelo ser capaz de extrair? 
+A existência de uma regra similar para os 100 trens depende da consistência dos atributos que definem as classificações, como vagões curtos ou com teto fechado, e da capacidade do modelo em identificar esses padrões nos dados. Caso não exista uma única regra válida, o número de regras possíveis que o modelo deveria ser capaz de extrair depende das combinações de atributos observadas. Para \( n \) atributos binários, há \( 2^n \) combinações possíveis, e cada combinação pode ser classificada como "east" ou "west", resultando em \( 2^{2^n} \) regras potenciais. Na prática, o número de regras será limitado pelos dados disponíveis e pela diversidade dos atributos, devendo o modelo ser capaz de capturar padrões suficientes para generalizar as classificações.
+
 
